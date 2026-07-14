@@ -548,6 +548,79 @@ body::selection {
   font-weight: 600;
 }
 
+/* ----------EXPERIENCE---------- */
+#experience {
+  background-color: #2d2e32;
+  padding: 100px 150px;
+  scroll-margin-top: 100px;
+}
+
+.experience-title {
+  max-width: 60%;
+  margin-bottom: 50px;
+}
+
+.experience-title h3 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+}
+
+.experience-title p {
+  font-size: 14px;
+  color: #a3a4a8;
+  font-weight: 400;
+  margin: 0;
+}
+
+.timeline-item {
+  background-color: #25262a;
+  border-radius: 8px;
+  padding: 25px 30px;
+  margin-bottom: 20px;
+}
+
+.timeline-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timeline-header h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.timeline-date {
+  font-size: 13px;
+  color: #64f4ac;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.timeline-org {
+  font-size: 14px;
+  color: #a3a4a8;
+  margin: 6px 0 15px 0;
+}
+
+.timeline-item ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.timeline-item li {
+  font-size: 15px;
+  color: #cacaca;
+  line-height: 24px;
+  margin-bottom: 6px;
+}
+
 /* ----------LATEST WORKS---------- */
 #latest-works {
   min-height: 150vh;
@@ -1101,6 +1174,16 @@ body::selection {
 
   .body-part-2 {
     transform: scale(0.55);
+  }
+}
+
+@media (max-width: 900px) {
+  #experience {
+    padding: 60px 20px;
+  }
+
+  .experience-title {
+    max-width: 100%;
   }
 }
 
