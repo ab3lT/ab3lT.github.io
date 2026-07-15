@@ -360,6 +360,7 @@ body::selection {
   background-color: #25262a;
   min-height: 95vh;
   align-items: center;
+  scroll-margin-top: 100px;
 }
 
 .cards {
@@ -466,6 +467,7 @@ body::selection {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  scroll-margin-top: 100px;
 }
 
 .left-project {
@@ -610,6 +612,7 @@ body::selection {
   height: 100vh;
   width: 100%;
   padding: 100px 150px;
+  scroll-margin-top: 100px;
 }
 
 .testimonial-title {
@@ -742,6 +745,7 @@ body::selection {
   padding: 100px;
   background-color: #25262a;
   height: 100vh;
+  scroll-margin-top: 40px;
 }
 
 .footer-left {
