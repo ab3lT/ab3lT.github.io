@@ -621,6 +621,13 @@ body::selection {
   margin-bottom: 6px;
 }
 
+/* ----------EDUCATION---------- */
+#education {
+  background-color: #25262a;
+  padding: 100px 150px;
+  scroll-margin-top: 100px;
+}
+
 /* ----------LATEST WORKS---------- */
 #latest-works {
   min-height: 150vh;
@@ -1184,6 +1191,10 @@ body::selection {
 
   .experience-title {
     max-width: 100%;
+  }
+
+  #education {
+    padding: 60px 20px;
   }
 }
 
