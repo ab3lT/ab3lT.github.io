@@ -276,6 +276,12 @@ body::selection {
   margin: 20px 0;
 }
 
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
 .body-tail {
   display: flex;
   align-items: start;
