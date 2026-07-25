@@ -1,3 +1,22 @@
+const hamburger_btn = document.querySelector('.hamburger-btn');
+const navbar_menu = document.getElementById('navbar-menu');
+
+if (hamburger_btn && navbar_menu) {
+    hamburger_btn.addEventListener('click', () => {
+        const isOpen = navbar_menu.classList.toggle('open');
+        hamburger_btn.classList.toggle('open', isOpen);
+        hamburger_btn.setAttribute('aria-expanded', isOpen);
+    });
+
+    navbar_menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            navbar_menu.classList.remove('open');
+            hamburger_btn.classList.remove('open');
+            hamburger_btn.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+
 const design_card_butttons = document.querySelectorAll('.design-card');
 const introduction_text = document.querySelectorAll('.introduction-text');
 
