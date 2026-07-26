@@ -982,3 +982,50 @@ body::selection {
 .social-icons a:nth-child(4) i:hover {
   color: #29a9eb;
 }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  #header {
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    z-index: 2;
+  }
+
+  #header nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 15px 0 0 0;
+    gap: 10px;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    padding: 0;
+  }
+
+  .hamburger-btn.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-btn.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
