@@ -1028,4 +1028,53 @@ body::selection {
   .hamburger-btn.open span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
   }
+
+  #content-body {
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .body-part-1 {
+    align-items: center;
+  }
+
+  .developer-intro,
+  .body-tail {
+    justify-content: center;
+  }
+
+  .body-title h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .hero-cta {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .body-part-2 {
+    margin-top: 40px;
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-cv-btn span,
+  .navbar-cv-btn {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+
+  .body-title h1 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .body-part-2 {
+    transform: scale(0.55);
+  }
 }
