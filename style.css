@@ -1078,3 +1078,25 @@ body::selection {
     transform: scale(0.55);
   }
 }
+
+@media (max-width: 900px) {
+  #introduction {
+    flex-direction: column;
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  .cards,
+  .introduction-text {
+    min-width: 100%;
+    padding-right: 0;
+  }
+
+  .design-card {
+    max-width: 100%;
+  }
+
+  .introduction-text {
+    margin-top: 40px;
+  }
+}
