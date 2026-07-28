@@ -670,6 +670,31 @@ body::selection {
   border-radius: 3px;
 }
 
+/* ----------CERTIFICATIONS---------- */
+#certifications {
+  background-color: #25262a;
+  padding: 100px 150px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  scroll-margin-top: 100px;
+}
+
+#certifications .skill-group {
+  flex: 1;
+}
+
+#certifications .skill-group ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+#certifications .skill-group li {
+  font-size: 14px;
+  color: #cacaca;
+  line-height: 24px;
+}
+
 /* ----------LATEST WORKS---------- */
 #latest-works {
   min-height: auto;
@@ -1144,6 +1169,11 @@ body::selection {
 
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  #certifications {
+    flex-direction: column;
+    padding: 60px 20px;
   }
 }
 
