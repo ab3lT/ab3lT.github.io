@@ -1100,3 +1100,34 @@ body::selection {
     margin-top: 40px;
   }
 }
+
+@media (max-width: 900px) {
+  #latest-works {
+    flex-direction: column;
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  .project-card {
+    min-width: 100%;
+    min-height: auto;
+    max-height: none;
+  }
+
+  .project-img-1,
+  .project-img-2,
+  .project-img-3 {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .project-card:hover .project-img-1,
+  .project-card:hover .project-img-2,
+  .project-card:hover .project-img-3 {
+    transform: none;
+  }
+}
