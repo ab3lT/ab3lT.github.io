@@ -43,6 +43,23 @@ design_card_butttons.forEach((button, index) => {
     });
 });
 
+const reveal_elements = document.querySelectorAll('.reveal');
+
+if (reveal_elements.length && 'IntersectionObserver' in window) {
+    const reveal_observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                reveal_observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    reveal_elements.forEach((el) => reveal_observer.observe(el));
+} else {
+    reveal_elements.forEach((el) => el.classList.add('visible'));
+}
+
 single_profile_card.forEach((btn, index) => {
     btn.addEventListener('click', ()=> {
         testimonial_card.forEach((testimonialCard, testimonialCardIndex) => {
