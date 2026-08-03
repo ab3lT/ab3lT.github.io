@@ -1,3 +1,13 @@
+const site_header = document.getElementById('header');
+
+if (site_header) {
+    const toggleHeaderShadow = () => {
+        site_header.classList.toggle('scrolled', window.scrollY > 10);
+    };
+    toggleHeaderShadow();
+    window.addEventListener('scroll', toggleHeaderShadow);
+}
+
 const hamburger_btn = document.querySelector('.hamburger-btn');
 const navbar_menu = document.getElementById('navbar-menu');
 

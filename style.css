@@ -147,6 +147,12 @@ body::selection {
   top: 0;
   left: 0;
   margin: 0;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#header.scrolled {
+  background-color: #2d2e32ee;
+  box-shadow: 0 4px 20px 2px #00000060;
 }
 
 /* #content-body {
