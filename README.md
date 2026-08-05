@@ -1,6 +1,6 @@
 # Abel Tadesse — Portfolio
 
-Personal portfolio site for Abel Tadesse, full-stack and mobile developer. Plain HTML/CSS/JS, served as-is via GitHub Pages.
+Personal portfolio site for Abel Tadesse, Software Engineer — Backend & Mobile Application Developer. Plain HTML/CSS/JS, served as-is via GitHub Pages. Content (experience, education, skills, projects, awards) is sourced from `assets/Abel_Tadesse_CV.pdf`.
 
 - Live site: https://ab3lT.github.io
 - GitHub: https://github.com/ab3lT
@@ -30,5 +30,5 @@ Replace that file whenever the CV is updated — the filename must stay the same
 
 ## Known placeholders / TODO
 
-- The testimonial section's three client cards use placeholder names and avatars (`assets/Abel.jpg` reused as a stand-in). Replace with real client quotes, names, and photos once available — do not fabricate attributions.
-- "Notes" in the nav currently links to the testimonials section, since there is no dedicated blog/notes page yet.
+- "Notes" in the nav currently links to the Awards & Recognition section, since there is no dedicated blog/notes page yet.
+- Project cards (Latest Works) currently show text only — no screenshots exist for the real projects listed. Add screenshots to `assets/Projects/` and wire them in if available.
