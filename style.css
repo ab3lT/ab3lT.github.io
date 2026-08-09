@@ -1424,3 +1424,24 @@ h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; }
 h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 600; }
 h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); font-weight: 600; }
 p  { color: var(--muted); line-height: 1.7; }
+
+/* ============================================================
+   SURFACES (rebrand) — map sections & cards onto tokens
+   ============================================================ */
+#content-body { background: var(--bg); }
+#experience, #skills { background: var(--bg); }
+#introduction, #education, #certifications, #latest-works, #footer { background: var(--surface); }
+#header {
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  border-color: var(--border);
+}
+#header.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); }
+.design-card,
+.timeline-item,
+.skill-group,
+.award-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+.background-circle { background: var(--surface-2); }
+.circle span { background: var(--surface-2); }
