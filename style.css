@@ -1445,3 +1445,22 @@ p  { color: var(--muted); line-height: 1.7; }
 }
 .background-circle { background: var(--surface-2); }
 .circle span { background: var(--surface-2); }
+
+/* ============================================================
+   LIGHT THEME (rebrand) — token overrides
+   ============================================================ */
+[data-theme="light"] {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --surface-2: #eef1f6;
+  --border: #d9dee7;
+  --text: #11151c;
+  --muted: #55606f;
+  --accent: #0ea968;
+  --accent-600: #0b8a54;
+  --accent-ink: #ffffff;
+  --accent-2: #4361ee;
+  --shadow-sm: 0 2px 8px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 10px 30px rgba(16, 24, 40, 0.10);
+  --shadow-lg: 0 24px 60px rgba(16, 24, 40, 0.14);
+}
