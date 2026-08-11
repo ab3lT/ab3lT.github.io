@@ -1464,3 +1464,26 @@ p  { color: var(--muted); line-height: 1.7; }
   --shadow-md: 0 10px 30px rgba(16, 24, 40, 0.10);
   --shadow-lg: 0 24px 60px rgba(16, 24, 40, 0.14);
 }
+
+/* ============================================================
+   THEME TOGGLE (rebrand)
+   ============================================================ */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-left: 16px;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  cursor: pointer;
+  transition: color .25s ease, border-color .25s ease, transform .25s ease;
+}
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
