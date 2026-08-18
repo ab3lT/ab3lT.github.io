@@ -91,3 +91,27 @@ if (reveal_elements.length && 'IntersectionObserver' in window) {
         });
     }
 })();
+
+/* ---------- Scroll-spy: highlight the in-view section in the nav ---------- */
+(function () {
+    const links = Array.from(document.querySelectorAll('.navbar-menu a[href^="#"]'));
+    if (!links.length || !('IntersectionObserver' in window)) return;
+
+    const map = new Map();
+    links.forEach((link) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) map.set(target, link);
+    });
+
+    const spy = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                links.forEach((l) => l.classList.remove('active'));
+                const link = map.get(entry.target);
+                if (link) link.classList.add('active');
+            }
+        });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    map.forEach((_, target) => spy.observe(target));
+})();
