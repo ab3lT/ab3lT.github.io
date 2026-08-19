@@ -1526,3 +1526,18 @@ p  { color: var(--muted); line-height: 1.7; }
   color: var(--accent-ink);
   box-shadow: var(--shadow-sm);
 }
+
+/* ============================================================
+   MOBILE MENU (rebrand)
+   ============================================================ */
+@media (max-width: 900px) {
+  .navbar-menu.open {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    padding: 16px;
+    box-shadow: var(--shadow-md);
+  }
+  .navbar-menu li a { font-size: 15px; }
+  .hamburger-btn span { background: var(--text); }
+}
