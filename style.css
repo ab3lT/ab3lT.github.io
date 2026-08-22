@@ -1569,3 +1569,25 @@ p  { color: var(--muted); line-height: 1.7; }
   padding: clamp(80px, 12vh, 120px) clamp(20px, 5vw, 40px) 0;
   gap: clamp(24px, 5vw, 60px);
 }
+
+/* ============================================================
+   HERO BADGES (rebrand)
+   ============================================================ */
+.developer-intro p {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: var(--r-full);
+  padding: 6px 14px;
+  font-weight: 600;
+}
+.developer-intro p:first-child::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+}
