@@ -115,3 +115,26 @@ if (reveal_elements.length && 'IntersectionObserver' in window) {
 
     map.forEach((_, target) => spy.observe(target));
 })();
+
+/* ---------- Hero typing effect ---------- */
+(function () {
+    const el = document.querySelector('.typed');
+    if (!el) return;
+    const roles = (el.dataset.roles || '').split(',').map((r) => r.trim()).filter(Boolean);
+    if (!roles.length) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        el.textContent = roles[0];
+        return;
+    }
+    let r = 0, c = 0, deleting = false;
+    const tick = () => {
+        const word = roles[r];
+        el.textContent = word.slice(0, c);
+        if (!deleting && c < word.length) { c++; }
+        else if (deleting && c > 0) { c--; }
+        else if (!deleting && c === word.length) { deleting = true; setTimeout(tick, 1400); return; }
+        else { deleting = false; r = (r + 1) % roles.length; }
+        setTimeout(tick, deleting ? 45 : 90);
+    };
+    tick();
+})();
