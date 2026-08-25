@@ -1623,3 +1623,37 @@ p  { color: var(--muted); line-height: 1.7; }
   animation: caret 1s step-end infinite;
 }
 @keyframes caret { 50% { opacity: 0; } }
+
+/* ============================================================
+   HERO CTA (rebrand)
+   ============================================================ */
+.body-title a[href^="https://t.me"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 14px 26px;
+  border-radius: var(--r-full);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+.body-title a[href^="https://t.me"]:hover {
+  background: var(--accent-600);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.body-title a.download-cv-btn {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+}
+.body-title a.download-cv-btn:hover {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: none;
+}
