@@ -1671,3 +1671,22 @@ p  { color: var(--muted); line-height: 1.7; }
   font-size: 13px;
   padding: 0 24px 0 6px;
 }
+
+/* ============================================================
+   HERO VISUAL (rebrand)
+   ============================================================ */
+.background-circle {
+  background: radial-gradient(circle at 30% 30%, var(--surface-2), var(--surface));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+.body-part-2::before {
+  content: "";
+  position: absolute;
+  inset: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 18%, transparent), transparent 60%);
+  filter: blur(30px);
+  z-index: 0;
+  pointer-events: none;
+}
