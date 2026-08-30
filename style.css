@@ -1713,3 +1713,22 @@ p  { color: var(--muted); line-height: 1.7; }
   .developer-intro { flex-wrap: wrap; gap: 10px; }
   .body-tail { justify-content: center; flex-wrap: wrap; }
 }
+
+/* ============================================================
+   SECTION RHYTHM (rebrand) — consistent vertical padding
+   ============================================================ */
+#introduction,
+#experience,
+#education,
+#skills,
+#certifications,
+#latest-works,
+#testimonial {
+  padding: clamp(60px, 10vh, 100px) clamp(20px, 6vw, 150px);
+}
+.experience-title h3,
+.latest-work-title h3,
+.testimonial-title h2 {
+  border-left: 4px solid var(--accent);
+  padding-left: 18px;
+}
