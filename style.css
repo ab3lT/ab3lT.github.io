@@ -1750,3 +1750,20 @@ p  { color: var(--muted); line-height: 1.7; }
 }
 .design-card.active div { color: var(--accent); }
 .design-card.active p { color: var(--muted); font-weight: 600; }
+
+/* ============================================================
+   ABOUT (rebrand)
+   ============================================================ */
+.introduction-text p:nth-child(1) {
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.introduction-text h2 { color: var(--text); }
+.introduction-text h4 {
+  color: var(--accent);
+  font-style: normal;
+  font-weight: 600;
+}
+.introduction-text p { color: var(--muted); }
