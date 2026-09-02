@@ -1767,3 +1767,17 @@ p  { color: var(--muted); line-height: 1.7; }
   font-weight: 600;
 }
 .introduction-text p { color: var(--muted); }
+
+/* ============================================================
+   SERVICES ACTIVE INDICATOR (rebrand)
+   ============================================================ */
+.design-card { position: relative; overflow: hidden; }
+.design-card.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent);
+}
