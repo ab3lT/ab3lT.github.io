@@ -1790,3 +1790,29 @@ p  { color: var(--muted); line-height: 1.7; }
   line-height: 1.8;
 }
 .introduction-text h2 { margin-bottom: 8px; }
+
+/* ============================================================
+   FIX: scope hero grid to a backdrop pseudo-element so the
+   radial mask no longer fades the hero text/stats.
+   ============================================================ */
+#content-body {
+  -webkit-mask-image: none;
+          mask-image: none;
+  background-image: none;
+  position: relative;
+}
+#content-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--border) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--border) 55%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 75%);
+          mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 75%);
+}
+.body-part-1,
+.body-part-2 { position: relative; z-index: 1; }
