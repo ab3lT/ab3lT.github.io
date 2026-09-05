@@ -1816,3 +1816,24 @@ p  { color: var(--muted); line-height: 1.7; }
 }
 .body-part-1,
 .body-part-2 { position: relative; z-index: 1; }
+
+/* ============================================================
+   TIMELINE (rebrand)
+   ============================================================ */
+.timeline-item {
+  position: relative;
+  border-radius: var(--r-lg);
+  border-left: 3px solid var(--border);
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 28px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--bg);
+}
+.timeline-item:hover { border-left-color: var(--accent); }
