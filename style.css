@@ -1846,3 +1846,10 @@ p  { color: var(--muted); line-height: 1.7; }
 .timeline-org { color: var(--muted); }
 .timeline-item li { color: var(--muted); }
 .timeline-date { color: var(--accent); }
+
+/* ============================================================
+   EDUCATION (rebrand) — secondary accent variant
+   ============================================================ */
+#education .timeline-item::before { background: var(--accent-2); }
+#education .timeline-item:hover { border-left-color: var(--accent-2); }
+#education .timeline-date { color: var(--accent-2); }
