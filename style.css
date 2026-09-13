@@ -1911,3 +1911,20 @@ p  { color: var(--muted); line-height: 1.7; }
   border-radius: 3px;
   background: var(--accent);
 }
+
+/* ============================================================
+   SKILL CHIPS (rebrand)
+   ============================================================ */
+.skill-tags p {
+  background: color-mix(in srgb, var(--text) 8%, transparent);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  padding: 5px 12px;
+}
+.skill-tags p:hover {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
