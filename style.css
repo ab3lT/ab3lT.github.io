@@ -1928,3 +1928,11 @@ p  { color: var(--muted); line-height: 1.7; }
   border-color: var(--accent);
   transform: translateY(-2px);
 }
+
+/* ============================================================
+   SKILLS RESPONSIVE (rebrand)
+   ============================================================ */
+@media (max-width: 600px) {
+  .skill-tags p { font-size: 11px; padding: 4px 10px; }
+  #skills .skill-group { padding: 18px; }
+}
