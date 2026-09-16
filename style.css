@@ -1954,3 +1954,31 @@ p  { color: var(--muted); line-height: 1.7; }
   min-width: 0;
   width: 100%;
 }
+
+/* ============================================================
+   PROJECT CARD (rebrand) — unify surfaces
+   ============================================================ */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+.project-card-1,
+.project-card-2,
+.project-card-3,
+.project-card-4,
+.project-card-5 { background: var(--surface-2); }
+.project-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: .85;
+}
+.project-card .title h3 { font-family: var(--font-display); color: var(--text); }
+.project-desc { color: var(--muted); }
