@@ -1982,3 +1982,20 @@ p  { color: var(--muted); line-height: 1.7; }
 }
 .project-card .title h3 { font-family: var(--font-display); color: var(--text); }
 .project-desc { color: var(--muted); }
+
+/* ============================================================
+   TECH CHIPS (rebrand)
+   ============================================================ */
+.project-card .title .tech-stack p {
+  background: color-mix(in srgb, var(--text) 8%, transparent);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  padding: 4px 10px;
+  max-height: none;
+}
+.project-card .title .tech-stack p:hover {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
