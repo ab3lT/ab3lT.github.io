@@ -1999,3 +1999,12 @@ p  { color: var(--muted); line-height: 1.7; }
   color: var(--accent-ink);
   border-color: var(--accent);
 }
+
+/* ============================================================
+   PROJECT HOVER (rebrand)
+   ============================================================ */
+.project-card { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
