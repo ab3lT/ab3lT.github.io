@@ -2050,3 +2050,12 @@ p  { color: var(--muted); line-height: 1.7; }
   padding: 3px 10px;
   border-radius: var(--r-full);
 }
+
+/* ============================================================
+   PROJECTS RESPONSIVE (rebrand)
+   ============================================================ */
+@media (max-width: 900px) {
+  #latest-works { flex-direction: column; }
+  .left-project,
+  .right-project { width: 100%; }
+}
