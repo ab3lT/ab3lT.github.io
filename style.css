@@ -2090,3 +2090,21 @@ p  { color: var(--muted); line-height: 1.7; }
   font-family: var(--font-display);
 }
 #certifications .skill-group li { color: var(--muted); }
+
+/* ============================================================
+   LANGUAGES (rebrand)
+   ============================================================ */
+#certifications .skill-group:last-child ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#certifications .skill-group:last-child li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
