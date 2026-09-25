@@ -2108,3 +2108,20 @@ p  { color: var(--muted); line-height: 1.7; }
   border-bottom: 1px solid var(--border);
   padding-bottom: 8px;
 }
+
+/* ============================================================
+   FOOTER LAYOUT (rebrand)
+   ============================================================ */
+#footer {
+  height: auto;
+  border-top: 1px solid var(--border);
+  gap: clamp(30px, 5vw, 60px);
+  padding: clamp(60px, 10vh, 100px);
+}
+.footer-left h2 { font-family: var(--font-display); color: var(--text); }
+.footer-right { padding: 0; justify-content: flex-start; gap: 40px; }
+.footer-email-intro p { color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
+.footer-email-intro h6 { color: var(--muted); }
+.footer-email-intro h3 { color: var(--text); }
+.footer-menu li a:hover,
+.footer-menu .active { color: var(--accent); }
