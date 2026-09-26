@@ -138,3 +138,33 @@ if (reveal_elements.length && 'IntersectionObserver' in window) {
     };
     tick();
 })();
+
+/* ---------- Contact form: validate and open a prefilled email ---------- */
+(function () {
+    const form = document.querySelector('.email-form');
+    if (!form) return;
+    const button = form.querySelector('button');
+    const name = form.querySelector('input[name="name"]');
+    const email = form.querySelector('input[name="email"]');
+    if (!button || !name || !email) return;
+
+    const status = document.createElement('p');
+    status.className = 'form-status';
+    form.appendChild(status);
+
+    const valid = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (!name.value.trim() || !valid(email.value.trim())) {
+            status.textContent = 'Please enter your name and a valid email.';
+            status.className = 'form-status error';
+            return;
+        }
+        const subject = encodeURIComponent('Portfolio enquiry from ' + name.value.trim());
+        const body = encodeURIComponent('Hi Abel,\n\n');
+        status.textContent = 'Opening your email client…';
+        status.className = 'form-status ok';
+        window.location.href = 'mailto:se.abel.tadesse@gmail.com?subject=' + subject + '&body=' + body;
+    });
+})();

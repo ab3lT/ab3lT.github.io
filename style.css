@@ -2125,3 +2125,34 @@ p  { color: var(--muted); line-height: 1.7; }
 .footer-email-intro h3 { color: var(--text); }
 .footer-menu li a:hover,
 .footer-menu .active { color: var(--accent); }
+
+/* ============================================================
+   CONTACT FORM (rebrand)
+   ============================================================ */
+.email-form {
+  background-image: none;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  height: auto;
+  padding: 28px;
+  gap: 14px;
+}
+.email-form h2 { color: var(--text); }
+.email-form h2 span { color: var(--accent); }
+.email-form input {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  height: 42px;
+}
+.email-form input::placeholder { color: var(--muted); }
+.email-form div button {
+  background: var(--accent);
+  color: var(--accent-ink);
+  height: 42px;
+  font-weight: 700;
+}
+.email-form div button:hover { background: var(--accent-600); }
+.form-status { font-size: 13px; margin: 6px 0 0; }
+.form-status.error { color: #ff6b6b; }
+.form-status.ok { color: var(--accent); }
