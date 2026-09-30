@@ -174,3 +174,13 @@ if (reveal_elements.length && 'IntersectionObserver' in window) {
     const el = document.getElementById('year');
     if (el) el.textContent = new Date().getFullYear();
 })();
+
+/* ---------- Back to top ---------- */
+(function () {
+    const btn = document.querySelector('.back-to-top');
+    if (!btn) return;
+    const onScroll = () => btn.classList.toggle('show', window.scrollY > 500);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+})();
