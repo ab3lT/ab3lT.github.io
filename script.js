@@ -184,3 +184,17 @@ if (reveal_elements.length && 'IntersectionObserver' in window) {
     window.addEventListener('scroll', onScroll, { passive: true });
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 })();
+
+/* ---------- Scroll progress bar ---------- */
+(function () {
+    const bar = document.querySelector('.scroll-progress');
+    if (!bar) return;
+    const update = () => {
+        const h = document.documentElement;
+        const max = h.scrollHeight - h.clientHeight;
+        bar.style.transform = 'scaleX(' + (max > 0 ? h.scrollTop / max : 0) + ')';
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+})();
