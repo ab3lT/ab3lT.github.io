@@ -1505,3 +1505,24 @@ p  { color: var(--muted); line-height: 1.7; }
   transition: top .2s ease;
 }
 .skip-link:focus { top: 12px; }
+
+/* ============================================================
+   HEADER POLISH (rebrand)
+   ============================================================ */
+#header { padding: 16px clamp(20px, 5vw, 48px); }
+.title-first-name,
+.title-last-name { font-family: var(--font-display); }
+.title-last-name { color: var(--muted); }
+.navbar-menu li a { color: var(--text); }
+.navbar-menu .active,
+.navbar-menu li a:hover { color: var(--accent); }
+.navbar-cv-btn {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-radius: var(--r-full);
+}
+.navbar-cv-btn:hover {
+  background: var(--accent-600);
+  color: var(--accent-ink);
+  box-shadow: var(--shadow-sm);
+}
