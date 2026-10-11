@@ -127,27 +127,6 @@ p {
   margin: 40px 0;
 }
 
-button.normal {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 15px 30px;
-  color: black;
-  background-color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  transition: 0.5s ease;
-}
-
-button.normal:hover {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 15px 30px;
-  color: #fff;
-  background-color: #088178;
-}
-
 body {
   width: 100%;
   background-color: #2d2e32;
@@ -201,12 +180,6 @@ body::selection {
   background-color: #2d2e32ee;
   box-shadow: 0 4px 20px 2px #00000060;
 }
-
-/* #content-body {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-} */
 
 .navbar-title {
   display: flex;
