@@ -1703,3 +1703,13 @@ p  { color: var(--muted); line-height: 1.7; }
   -webkit-mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 75%);
           mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 75%);
 }
+
+/* ============================================================
+   HERO RESPONSIVE (rebrand)
+   ============================================================ */
+@media (max-width: 900px) {
+  #content-body { padding-top: 90px; }
+  .hero-role { text-align: center; }
+  .developer-intro { flex-wrap: wrap; gap: 10px; }
+  .body-tail { justify-content: center; flex-wrap: wrap; }
+}
