@@ -1605,3 +1605,21 @@ p  { color: var(--muted); line-height: 1.7; }
   font-size: 15px;
   max-width: 46ch;
 }
+
+/* ============================================================
+   HERO TYPING (rebrand)
+   ============================================================ */
+.hero-role {
+  font-family: var(--font-body);
+  color: var(--muted);
+  font-size: 15px;
+  margin-top: 10px;
+}
+.hero-role .typed { color: var(--accent); font-weight: 600; }
+.hero-role .typed::after {
+  content: "|";
+  margin-left: 2px;
+  color: var(--accent);
+  animation: caret 1s step-end infinite;
+}
+@keyframes caret { 50% { opacity: 0; } }
