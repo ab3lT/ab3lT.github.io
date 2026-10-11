@@ -2059,3 +2059,18 @@ p  { color: var(--muted); line-height: 1.7; }
   .left-project,
   .right-project { width: 100%; }
 }
+
+/* ============================================================
+   AWARDS (rebrand)
+   ============================================================ */
+#testimonial .award-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+.award-card i {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
+}
+.award-card h4 { font-family: var(--font-display); color: var(--text); }
+.award-card p { color: var(--muted); }
