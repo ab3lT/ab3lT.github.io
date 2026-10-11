@@ -2242,3 +2242,26 @@ p  { color: var(--muted); line-height: 1.7; }
   .skill-group,
   .award-card { transition: none; }
 }
+
+/* ============================================================
+   PRINT STYLES (rebrand) — final polish
+   ============================================================ */
+@media print {
+  #header,
+  .scroll-progress,
+  .back-to-top,
+  .theme-toggle,
+  .email-form,
+  .hoodie-guy-animation-class,
+  .background-circle { display: none !important; }
+  :root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #ffffff;
+    --text: #000000;
+    --muted: #333333;
+    --border: #cccccc;
+  }
+  body { background: #fff; color: #000; }
+  a { text-decoration: underline; }
+}
