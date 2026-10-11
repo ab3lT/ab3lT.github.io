@@ -66,3 +66,28 @@ if (reveal_elements.length && 'IntersectionObserver' in window) {
 } else {
     reveal_elements.forEach((el) => el.classList.add('visible'));
 }
+/* ---------- Theme toggle (persisted) ---------- */
+(function () {
+    const root = document.documentElement;
+    const toggle = document.querySelector('.theme-toggle');
+    const icon = toggle ? toggle.querySelector('i') : null;
+
+    const apply = (theme) => {
+        root.setAttribute('data-theme', theme);
+        if (icon) {
+            icon.className = theme === 'light' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        }
+    };
+
+    const stored = localStorage.getItem('theme');
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    apply(stored || (prefersLight ? 'light' : 'dark'));
+
+    if (toggle) {
+        toggle.addEventListener('click', () => {
+            const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            localStorage.setItem('theme', next);
+            apply(next);
+        });
+    }
+})();
