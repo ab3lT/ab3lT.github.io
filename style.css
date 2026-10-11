@@ -1591,3 +1591,17 @@ p  { color: var(--muted); line-height: 1.7; }
   background: var(--accent);
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
 }
+
+/* ============================================================
+   HERO TITLE (rebrand)
+   ============================================================ */
+.body-title h1 {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+.body-title > p {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 46ch;
+}
