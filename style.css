@@ -1541,3 +1541,21 @@ p  { color: var(--muted); line-height: 1.7; }
   .navbar-menu li a { font-size: 15px; }
   .hamburger-btn span { background: var(--text); }
 }
+
+/* ============================================================
+   BRAND MONOGRAM (rebrand)
+   ============================================================ */
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: var(--r-md);
+}
