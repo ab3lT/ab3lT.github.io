@@ -168,3 +168,9 @@ if (reveal_elements.length && 'IntersectionObserver' in window) {
         window.location.href = 'mailto:se.abel.tadesse@gmail.com?subject=' + subject + '&body=' + body;
     });
 })();
+
+/* ---------- Dynamic copyright year ---------- */
+(function () {
+    const el = document.getElementById('year');
+    if (el) el.textContent = new Date().getFullYear();
+})();

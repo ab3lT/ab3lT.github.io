@@ -2175,3 +2175,14 @@ p  { color: var(--muted); line-height: 1.7; }
 .social-icons a:hover { border-color: var(--accent); transform: translateY(-2px); }
 .social-icons a i { margin: 0; color: var(--text); }
 .social-icons a:hover i { color: var(--accent); }
+
+/* ============================================================
+   SITE CREDIT BAR (rebrand)
+   ============================================================ */
+.site-credit {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 20px;
+}
+.site-credit p { color: var(--muted); font-size: 13px; margin: 0; }
