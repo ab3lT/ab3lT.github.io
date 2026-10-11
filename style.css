@@ -2156,3 +2156,22 @@ p  { color: var(--muted); line-height: 1.7; }
 .form-status { font-size: 13px; margin: 6px 0 0; }
 .form-status.error { color: #ff6b6b; }
 .form-status.ok { color: var(--accent); }
+
+/* ============================================================
+   SOCIAL ICONS (rebrand)
+   ============================================================ */
+.social-icons { display: flex; gap: 10px; }
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  background: var(--surface-2);
+  transition: border-color .25s ease, transform .25s ease;
+}
+.social-icons a:hover { border-color: var(--accent); transform: translateY(-2px); }
+.social-icons a i { margin: 0; color: var(--text); }
+.social-icons a:hover i { color: var(--accent); }
