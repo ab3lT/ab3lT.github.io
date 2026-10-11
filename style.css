@@ -2074,3 +2074,19 @@ p  { color: var(--muted); line-height: 1.7; }
 }
 .award-card h4 { font-family: var(--font-display); color: var(--text); }
 .award-card p { color: var(--muted); }
+
+/* ============================================================
+   CERTIFICATIONS (rebrand)
+   ============================================================ */
+#certifications { gap: var(--sp-3); }
+#certifications .skill-group {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 24px;
+}
+#certifications .skill-group h4 {
+  color: var(--accent);
+  font-family: var(--font-display);
+}
+#certifications .skill-group li { color: var(--muted); }
