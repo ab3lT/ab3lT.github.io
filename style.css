@@ -2265,3 +2265,14 @@ p  { color: var(--muted); line-height: 1.7; }
   body { background: #fff; color: #000; }
   a { text-decoration: underline; }
 }
+
+/* ============================================================
+   FIX: light-theme text contrast in header & footer
+   (original template forced #fefefe text that vanished on light)
+   ============================================================ */
+#header { color: var(--text); }
+.title-first-name { color: var(--text); }
+.title-last-name { color: var(--muted); }
+.social-media li a,
+.social-media li i { color: var(--text); }
+.footer-menu li a { color: var(--text); }
