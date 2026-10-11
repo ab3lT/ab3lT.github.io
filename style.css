@@ -1732,3 +1732,21 @@ p  { color: var(--muted); line-height: 1.7; }
   border-left: 4px solid var(--accent);
   padding-left: 18px;
 }
+
+/* ============================================================
+   SERVICES CARDS (rebrand)
+   ============================================================ */
+.design-card {
+  border-radius: var(--r-lg);
+  padding: 24px;
+}
+.design-card div { color: var(--text); }
+.design-card div i { color: var(--accent); font-size: 20px; }
+.design-card p { color: var(--muted); }
+.design-card a { color: var(--accent); }
+.design-card.active {
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+.design-card.active div { color: var(--accent); }
+.design-card.active p { color: var(--muted); font-weight: 600; }
