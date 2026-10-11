@@ -1895,3 +1895,19 @@ p  { color: var(--muted); line-height: 1.7; }
   padding: 22px 24px;
 }
 #skills .skill-group h4 { color: var(--accent); }
+
+/* ============================================================
+   SKILLS CATEGORY MARKERS (rebrand)
+   ============================================================ */
+#skills .skill-group h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#skills .skill-group h4::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--accent);
+}
