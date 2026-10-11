@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
 
 /* ============================================================
    DESIGN TOKENS
@@ -1410,3 +1410,17 @@ input:focus-visible {
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+/* ============================================================
+   TYPOGRAPHY (rebrand) — display headings + fluid scale
+   ============================================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 600; }
+h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); font-weight: 600; }
+p  { color: var(--muted); line-height: 1.7; }
