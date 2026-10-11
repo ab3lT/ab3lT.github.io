@@ -1559,3 +1559,13 @@ p  { color: var(--muted); line-height: 1.7; }
   font-size: 18px;
   border-radius: var(--r-md);
 }
+
+/* ============================================================
+   HERO LAYOUT (rebrand)
+   ============================================================ */
+#content-body {
+  max-width: var(--maxw);
+  margin: 0 auto 10vh;
+  padding: clamp(80px, 12vh, 120px) clamp(20px, 5vw, 40px) 0;
+  gap: clamp(24px, 5vw, 60px);
+}
