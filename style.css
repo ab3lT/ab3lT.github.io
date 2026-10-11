@@ -1781,3 +1781,12 @@ p  { color: var(--muted); line-height: 1.7; }
   width: 4px;
   background: var(--accent);
 }
+
+/* ============================================================
+   ABOUT LEAD (rebrand)
+   ============================================================ */
+.introduction-text p:last-child {
+  font-size: 17px;
+  line-height: 1.8;
+}
+.introduction-text h2 { margin-bottom: 8px; }
