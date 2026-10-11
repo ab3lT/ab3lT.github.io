@@ -1853,3 +1853,15 @@ p  { color: var(--muted); line-height: 1.7; }
 #education .timeline-item::before { background: var(--accent-2); }
 #education .timeline-item:hover { border-left-color: var(--accent-2); }
 #education .timeline-date { color: var(--accent-2); }
+
+/* ============================================================
+   DATE BADGES (rebrand)
+   ============================================================ */
+.timeline-date {
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+}
+#education .timeline-date {
+  background: color-mix(in srgb, var(--accent-2) 16%, transparent);
+}
