@@ -2253,3 +2253,19 @@ p  { color: var(--muted); line-height: 1.7; }
   white-space: nowrap;
   border: 0;
 }
+
+/* ============================================================
+   CONTRAST + REDUCED MOTION (rebrand)
+   ============================================================ */
+:root { --muted: #acb3bf; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-role .typed::after { animation: none; }
+  .circle { animation: none; }
+  .back-to-top,
+  .project-card,
+  .timeline-item,
+  .design-card,
+  .skill-group,
+  .award-card { transition: none; }
+}
