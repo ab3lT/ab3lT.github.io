@@ -1837,3 +1837,12 @@ p  { color: var(--muted); line-height: 1.7; }
   box-shadow: 0 0 0 4px var(--bg);
 }
 .timeline-item:hover { border-left-color: var(--accent); }
+
+/* ============================================================
+   EXPERIENCE CARDS (rebrand)
+   ============================================================ */
+.timeline-item { background: var(--surface-2); }
+.timeline-header h4 { font-family: var(--font-display); color: var(--text); }
+.timeline-org { color: var(--muted); }
+.timeline-item li { color: var(--muted); }
+.timeline-date { color: var(--accent); }
