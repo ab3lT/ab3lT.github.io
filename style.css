@@ -2276,3 +2276,102 @@ p  { color: var(--muted); line-height: 1.7; }
 .social-media li a,
 .social-media li i { color: var(--text); }
 .footer-menu li a { color: var(--text); }
+
+/* ============================================================
+   ANIMATIONS — hero entrance, staggered grids, tab fades,
+   CTA shine, glow pulse
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px #00000080; }
+  50%      { box-shadow: 0 0 45px rgba(100, 244, 172, 0.25); }
+}
+@keyframes shine {
+  from { left: -75%; }
+  to   { left: 125%; }
+}
+
+/* Hero entrance */
+.developer-intro,
+.body-title > *,
+.body-tail { animation: fadeUp .7s cubic-bezier(.2, .7, .2, 1) both; }
+.developer-intro            { animation-delay: .05s; }
+.body-title > :nth-child(1) { animation-delay: .15s; }
+.body-title > :nth-child(2) { animation-delay: .25s; }
+.body-title > :nth-child(3) { animation-delay: .35s; }
+.body-title > :nth-child(4) { animation-delay: .45s; }
+.body-tail                  { animation-delay: .6s; }
+.body-part-2 { animation: fadeIn 1.1s ease .3s both; }
+.background-circle { animation: glowPulse 6s ease-in-out infinite; }
+
+/* Staggered children inside revealed grids */
+.reveal .skill-group,
+.reveal .award-card,
+.reveal .project-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .5s ease, transform .5s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.reveal.visible .skill-group,
+.reveal.visible .award-card,
+.reveal.visible .project-card { opacity: 1; transform: none; }
+.reveal.visible > .skill-group:nth-child(2),
+.reveal.visible > .award-card:nth-child(2),
+.reveal.visible > .project-card:nth-child(2) { transition-delay: .08s; }
+.reveal.visible > .skill-group:nth-child(3),
+.reveal.visible > .award-card:nth-child(3),
+.reveal.visible > .project-card:nth-child(3) { transition-delay: .16s; }
+.reveal.visible > .skill-group:nth-child(4),
+.reveal.visible > .award-card:nth-child(4),
+.reveal.visible > .project-card:nth-child(4) { transition-delay: .24s; }
+.reveal.visible > .skill-group:nth-child(5),
+.reveal.visible > .award-card:nth-child(5),
+.reveal.visible > .project-card:nth-child(5) { transition-delay: .32s; }
+.reveal.visible > .skill-group:nth-child(6),
+.reveal.visible > .award-card:nth-child(6),
+.reveal.visible > .project-card:nth-child(6) { transition-delay: .40s; }
+.reveal.visible .project-card:hover,
+.reveal.visible .award-card:hover { transform: translateY(-6px); transition-delay: 0s; }
+
+/* Intro tab switch fade */
+.introduction-text.fade-in { animation: fadeUp .45s ease both; }
+
+/* CTA shine sweep on hover */
+.hero-cta a { position: relative; overflow: hidden; }
+.hero-cta a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .35), transparent);
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+.hero-cta a:hover::after { animation: shine .7s ease; }
+
+/* Skill tags pop on hover */
+.skill-tags p { transition: transform .2s ease; }
+.skill-tags p:hover { transform: translateY(-3px) scale(1.05); }
+
+@media (prefers-reduced-motion: reduce) {
+  .developer-intro,
+  .body-title > *,
+  .body-tail,
+  .body-part-2,
+  .background-circle,
+  .introduction-text.fade-in,
+  .hero-cta a:hover::after { animation: none; }
+  .reveal .skill-group,
+  .reveal .award-card,
+  .reveal .project-card { opacity: 1; transform: none; transition: none; }
+  .skill-tags p:hover { transform: none; }
+}

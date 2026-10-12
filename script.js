@@ -35,6 +35,9 @@ design_card_butttons.forEach((button, index) => {
         introduction_text.forEach((introduction, introductionIndex) => {
             if (index === introductionIndex) {
                 introduction.style.display = 'block';
+                introduction.classList.remove('fade-in');
+                void introduction.offsetWidth;
+                introduction.classList.add('fade-in');
             } else {
                 introduction.style.display = 'none';
             }
@@ -197,4 +200,27 @@ if (reveal_elements.length && 'IntersectionObserver' in window) {
     update();
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
+})();
+
+/* ---------- Hero stats count-up ---------- */
+(function () {
+    const stats = document.querySelectorAll('.body-tail h1');
+    if (!stats.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    stats.forEach((el) => {
+        const match = el.textContent.match(/^(\d+)(.*)$/);
+        if (!match) return;
+        const target = parseInt(match[1], 10);
+        const suffix = match[2];
+        const duration = 1200;
+        let start = null;
+        const step = (ts) => {
+            if (start === null) start = ts;
+            const t = Math.min((ts - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = Math.round(target * eased) + suffix;
+            if (t < 1) requestAnimationFrame(step);
+        };
+        el.textContent = '0' + suffix;
+        setTimeout(() => requestAnimationFrame(step), 600);
+    });
 })();
