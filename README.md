@@ -52,3 +52,6 @@ npx serve .
 
 The "Download CV" buttons point to `assets/Abel_Tadesse_CV.pdf`. Replace that file when the CV is
 updated — keep the filename, or update both `href` attributes in `index.html`.
+
+> The download buttons are temporarily removed while the CV is being updated. The `.navbar-cv-btn` /
+> `.download-cv-btn` styles are still in `style.css`, so restoring the two links is all that is needed.
