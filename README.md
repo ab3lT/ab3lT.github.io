@@ -2,7 +2,7 @@
 
 Personal portfolio for **Abel Tadesse**, Software Engineer — Backend & Mobile Application Developer.
 Plain HTML/CSS/JS, no build step, served via GitHub Pages. Content (experience, education, skills,
-projects, awards) is sourced from `assets/Abel_Tadesse_CV.pdf`.
+projects, awards) is sourced from the CV.
 
 - Live site: https://ab3lt.github.io
 - GitHub: https://github.com/ab3lT
@@ -45,10 +45,14 @@ npx serve .
 - `index.html` — page markup and metadata
 - `style.css` — design tokens, components and responsive rules
 - `script.js` — theme toggle, scroll-spy, typing effect, contact validation, scroll-progress, back-to-top, reveals
-- `assets/` — images, icons and the downloadable CV
+- `assets/` — images and icons
 - `404.html`, `robots.txt`, `sitemap.xml`, `site.webmanifest` — hosting / SEO helpers
 
 ## CV download
 
 The "Download CV" buttons point to `assets/Abel_Tadesse_CV.pdf`. Replace that file when the CV is
 updated — keep the filename, or update both `href` attributes in `index.html`.
+
+> The download buttons and `assets/Abel_Tadesse_CV.pdf` are temporarily removed while the CV is being
+> updated. To restore, add the updated PDF back at that path and re-add the two links. The `.navbar-cv-btn` /
+> `.download-cv-btn` styles are still in `style.css`.
