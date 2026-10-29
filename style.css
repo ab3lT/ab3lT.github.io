@@ -2375,3 +2375,56 @@ p  { color: var(--muted); line-height: 1.7; }
   .reveal .project-card { opacity: 1; transform: none; transition: none; }
   .skill-tags p:hover { transform: none; }
 }
+
+/* ============================================================
+   ANIMATIONS II — timeline slide-in, dot pulse, heading wipe,
+   hero float, back-to-top nudge
+   ============================================================ */
+@keyframes dotPulse {
+  0%   { box-shadow: 0 0 0 4px var(--bg), 0 0 0 4px rgba(100, 244, 172, .45); }
+  70%  { box-shadow: 0 0 0 4px var(--bg), 0 0 0 12px rgba(100, 244, 172, 0); }
+  100% { box-shadow: 0 0 0 4px var(--bg), 0 0 0 12px rgba(100, 244, 172, 0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+@keyframes nudgeUp {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+/* Timeline cards slide in from the left; dot pulses once in view */
+.timeline-item.reveal { transform: translateX(-30px); }
+.timeline-item.reveal.visible { transform: none; }
+.timeline-item.reveal.visible:hover { transform: translateY(-3px); }
+.timeline-item.visible::before { animation: dotPulse 2.4s ease-out .4s 3; }
+
+/* Section headings wipe in */
+.experience-title.visible h3,
+.experience-title.visible p,
+.testimonial-title.visible h2,
+.testimonial-title.visible p { animation: slideInLeft .6s cubic-bezier(.2, .7, .2, 1) both; }
+.experience-title.visible p,
+.testimonial-title.visible p { animation-delay: .12s; }
+
+/* Hero illustration gently floats */
+.hoodie-guy { animation: float 6s ease-in-out 1.2s infinite; }
+
+/* Back-to-top arrow nudges on hover */
+.back-to-top:hover i { animation: nudgeUp .6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-item.reveal { transform: none; }
+  .timeline-item.visible::before,
+  .experience-title.visible h3,
+  .experience-title.visible p,
+  .testimonial-title.visible h2,
+  .testimonial-title.visible p,
+  .hoodie-guy,
+  .back-to-top:hover i { animation: none; }
+}
